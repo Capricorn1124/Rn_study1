@@ -115,6 +115,8 @@ import {
         return <BottomTabBar
         {...this.props}
         activeTintColor={this.props.theme}
+       
+      
     />
         // 使用redux之前
           // const {routes, index} =this.props.navigation.state;
@@ -138,17 +140,19 @@ import {
       }
       
     _tabNavigator(){
-      if(this.Tabs){//因为每次改变state都会调用render，也就会一直嗲用这个函数，所以为了优化，只要存在就不调用了
-        return;
+      if(this.Tab){//因为每次改变state都会调用render，也就会一直嗲用这个函数，所以为了优化，只要存在就不调用了
+        console.log('111')
+        return this.Tab;
       }
         const {Popular,Trending,Favorite,My}= TABS;
         const tabs={Popular,Trending,Favorite};//根据需要定制显示的tab
         Popular.navigationOptions.tabBarLabel="课程";//动态配置属性
         
-      return this.Tabs= createBottomTabNavigator(tabs,
+     return this.Tab= createBottomTabNavigator(tabs,
         {tabBarComponent:props=>{
           return <TabBarComponent theme={this.props.theme} {...props}/>
         }})
+       
     }
       render(){
         NavigationUtil.navigation=this.props.navigation;
