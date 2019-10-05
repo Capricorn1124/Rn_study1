@@ -18,6 +18,9 @@ import { createDrawerNavigator, DrawerNavigatorItems} from 'react-navigation-dra
 import Homepage from '../pages/Home';
 import Detail from '../pages/Detail';
 import Welcome from '../pages/Welcome';
+import FetchDemo from '../pages/Fetchdemo';
+import AsyncStorageDemo from  '../pages/AsyncStorageDemo';
+import  DataStoreDemo from '../pages/DataStoreDemoPage';
 import {connect} from 'react-redux';
 import {createReactNavigationReduxMiddleware , createReduxContainer} from  'react-navigation-redux-helpers'
 
@@ -60,8 +63,6 @@ const AppTopNAvigation=createMaterialTopTabNavigator({
             tabBarLabel:"推荐"
         }
     }
- 
-
 },{
     tabBarOptions:{
         tabStyle:{
@@ -116,6 +117,25 @@ const AppStack=createStackNavigator({
             header:null,//可以通过header设为null 来禁用StackNavigator的Navigation Bar
         })
     },
+    FetchDemo:{
+        screen:FetchDemo,
+        navigationOptions:({navigation})=>({//静态配置
+            header:null,//可以通过header设为null 来禁用StackNavigator的Navigation Bar
+        })
+    }, 
+    AsyncStorageDemo:{
+        screen:AsyncStorageDemo,
+        navigationOptions:({navigation})=>({//静态配置
+            header:null,//可以通过header设为null 来禁用StackNavigator的Navigation Bar
+        })
+    }, 
+    DataStoreDemo:{
+        screen:DataStoreDemo,
+        navigationOptions:({navigation})=>({//静态配置
+            header:null,//可以通过header设为null 来禁用StackNavigator的Navigation Bar
+        })
+    },
+    
     Bottom:{
         screen:AppBottomNavigator,
         navigationOptions:({navigation})=>({//静态配置

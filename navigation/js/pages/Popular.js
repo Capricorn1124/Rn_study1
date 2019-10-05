@@ -11,7 +11,8 @@ import {createStackNavigator} from 'react-navigation-stack';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation'
 import { createMaterialTopTabNavigator ,createBottomTabNavigator} from 'react-navigation-tabs';
 import { createDrawerNavigator, DrawerNavigatorItems} from 'react-navigation-drawer';
-import NavigationUtil from '../nav/NavigationUtil'
+import NavigationUtil from '../nav/NavigationUtil';
+import FetchDemo from '../pages/Fetchdemo'
 import {
   SafeAreaView,
   StyleSheet,
@@ -101,6 +102,25 @@ class PopularTab extends Component{
                        NavigationUtil.goToPage({navigation:this.props.navigation},'Detail')
                    }}
                    >跳转到详情页</Text>
+                     <Button
+                       title="fetch"
+                       onPress={()=>{
+                        NavigationUtil.goToPage({navigation:this.props.navigation},'FetchDemo')
+                       }}
+                   />
+                       <Button
+                       title="AsyncStorageDemo"
+                       onPress={()=>{
+                        NavigationUtil.goToPage({navigation:this.props.navigation},'AsyncStorageDemo')
+                       }}
+                   />
+                     <Button
+                       title=" DataStoreDemo"
+                       onPress={()=>{
+                        NavigationUtil.goToPage({navigation:this.props.navigation},'DataStoreDemo')
+                       }}
+                   />
+                  
               </SafeAreaView>
                               
             </View>

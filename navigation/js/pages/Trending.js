@@ -10,15 +10,10 @@ import React, { Component } from 'react';
 import actions from '../action/index'
 import {
   SafeAreaView,
-  StyleSheet,
-  ScrollView,
   View,
   Text,
   StatusBar,
   Button,
-  FlatList,
-  RefreshControl,
-  ActivityIndicator
 } from 'react-native';
 
 import {
@@ -44,6 +39,7 @@ import {connect} from 'react-redux';
                          this.props.onThemeChange('#096')
                        }}
                    />
+                  
               </SafeAreaView>
                               
             </View>

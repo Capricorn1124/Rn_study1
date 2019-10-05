@@ -155,7 +155,7 @@ import {
        
     }
       render(){
-        NavigationUtil.navigation=this.props.navigation;
+        // NavigationUtil.navigation=this.props.navigation;
         const Tab=createAppContainer(this._tabNavigator());
         return <Tab/>
       }

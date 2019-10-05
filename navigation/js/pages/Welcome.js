@@ -54,6 +54,7 @@ export default class Welcome extends Component{
                     navigation.navigate("App");
                   }}
                    />
+
             </SafeAreaView>
                              
           
