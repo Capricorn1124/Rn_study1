@@ -7,7 +7,8 @@
  */
 
 import React, { Component } from 'react';
-
+import NavigationUtil from '../nav/NavigationUtil';
+import FetchDemo from '../pages/Fetchdemo'
 import {
   SafeAreaView,
   StyleSheet,
@@ -38,6 +39,29 @@ export default class My extends Component{
              <StatusBar barStyle="dark-content" />
              <SafeAreaView>
                    <Text>welcome to  my page</Text> 
+                   <Text 
+                   onPress={()=>{
+                       NavigationUtil.goToPage({navigation:this.props.navigation},'Detail')
+                   }}
+                   >跳转到详情页</Text>
+                     <Button
+                       title="fetch"
+                       onPress={()=>{
+                        NavigationUtil.goToPage({navigation:this.props.navigation},'FetchDemo')
+                       }}
+                   />
+                       <Button
+                       title="AsyncStorageDemo"
+                       onPress={()=>{
+                        NavigationUtil.goToPage({navigation:this.props.navigation},'AsyncStorageDemo')
+                       }}
+                   />
+                     <Button
+                       title=" DataStoreDemo"
+                       onPress={()=>{
+                        NavigationUtil.goToPage({navigation:this.props.navigation},'DataStoreDemo')
+                       }}
+                   />
               </SafeAreaView>
                               
             </View>
